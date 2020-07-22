@@ -1,0 +1,24 @@
+<h1> {{ title }} </h1>
+
+<input type="text" [(ngModel)]="title">
+
+<h2 *ngIf="title === 'hola'"> Subtitulo </h2>
+
+<div [ngSwitch]="title">
+    <h3 *ngSwitchCase="'platzi-store'"> Platzi-Store </h3>
+    <h3 *ngSwitchCase="'hello'"> Hello </h3>
+    <h3 *ngSwitchDefault> Ejercicio </h3>
+</div>
+
+
+<p *ngIf="items.length === 0">
+    No hay items
+</p>
+
+<button (click)="addItem()">Agregar item</button>
+<ul>
+    <li *ngFor="let item of items; index as i" >
+        {{ i }} - {{ item }}
+        <button (click)="deleteItem(i)" >Quitar</button>
+    </li>
+</ul>
