@@ -1,0 +1,32 @@
+:host{
+    margin: 2px;
+    border: 1px solid gainsboro;    
+    border-radius: 5px;
+    display: block;
+    padding: 5px 10px;
+    background-color: cornsilk;
+}
+
+:host:hover{
+    background-color: rgb(255, 240, 220);
+}
+
+img{
+    max-width: 100%;    
+}
+
+h3{
+    text-align: center;
+}
+
+.product-img-div{
+    min-height: 325px;
+}
+
+.centred-text-div{
+    text-align: center;
+}
+
+.smaller-font-div{
+    font-size: x-small;
+}
