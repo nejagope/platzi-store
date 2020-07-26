@@ -6,13 +6,14 @@
 </div>
 
 <div class="centred-text-div">
-    <label> {{ product.description }} </label>
+    <label> {{ product.description |slice:0:10 }}... </label>
 </div>
 
 <div class="centred-text-div samller-font-div">
     <strong> {{ product.price | currency: "Q" }}</strong>
 </div>
 
-<div class="centred-text-div">
+<div class="centred-text-div">    
     <button (click)="addCart()"> Añadir al carrito </button>
+    <a [routerLink]="['/products', product.id]"> Ver detalle </a>
 </div>
